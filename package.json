@@ -1,0 +1,23 @@
+{
+  "name": "earth-rotation-example",
+  "version": "0.0.1",
+  "description": "Example on how linear algebra helps with graphics transformation",
+  "private": true,
+  "scripts": {
+    "pre": "rm -rf ./dist && mkdir dist && cp ./src/index.html ./dist/",
+    "build": "npm run pre && webpack",
+    "start": "npm run pre && webpack-dev-server --mode=development --content-base ./dist/",
+    "test": "mocha **.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "5.2.0",
+    "webpack": "4.29.3",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "ml-matrix": "5.2.1"
+  }
+}
