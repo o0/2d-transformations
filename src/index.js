@@ -11,10 +11,17 @@ const getRotateMatrix = (deg, translateX = 0, translateY = 0) => new Matrix([
 ]);
 
 
-const getTransformationMatrix = ({xScale = 1, yScale = 1, xSkew = 0, ySkew = 0, xTranslate = 0, yTranslate = 0}) => new Matrix([
-  [xScale, Math.sin(degToRad(xSkew)), 0],
-  [-Math.sin(degToRad(ySkew)), yScale, 0],
-  [xTranslate, yTranslate, 1],
+const getTransformationMatrix = ({
+  scaleX = 1,
+  scaleY = 1,
+  skewX = 0,
+  skewY = 0,
+  translateX = 0,
+  translateY = 0
+}) => new Matrix([
+  [scaleX, Math.sin(degToRad(skewX)), 0],
+  [-Math.sin(degToRad(skewY)), scaleY, 0],
+  [translateX, translateY, 1],
 ]);
 
 
